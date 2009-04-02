@@ -1,0 +1,7 @@
+= taggit
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 bryanl. See LICENSE for details.
