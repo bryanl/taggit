@@ -1,7 +1,10 @@
-require 'spec_helper'
+require File.join(File.dirname(__FILE__), "spec_helper")
 
 describe "Taggit" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+  describe "Utils" do
+    it "should symlink a file" do
+      FileUtils.should_receive(:ln_s).with("src", "/project/.git/hooks/dest").and_return(true)
+      Taggit::Utils.symlink("src", "/project", "dest")
+    end
   end
 end
